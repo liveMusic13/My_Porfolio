@@ -667,6 +667,11 @@ body {
   gap: 10px;
 }
 
+.contacts__image-social_git {
+  width: 28px;
+  height: 28px;
+}
+
 .contacts__link {
   color: #3cf7c8;
   text-shadow: 0px 0px 25px #242019;
