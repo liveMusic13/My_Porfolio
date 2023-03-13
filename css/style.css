@@ -77,6 +77,21 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+@media (max-width: 767.98px) {
+  .header__container::after {
+    width: 97%;
+  }
+}
+@media (max-width: 505px) {
+  .header__container::after {
+    width: 96%;
+  }
+}
+@media (max-width: 380px) {
+  .header__container::after {
+    width: 95%;
+  }
+}
 
 .header__background-opacity {
   content: "";
