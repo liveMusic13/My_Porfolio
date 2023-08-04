@@ -1,0 +1,244 @@
+.header {}
+
+.header__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    height: calc($index * 10);
+    width: 98%;
+    bottom: calc($index * -4.5);
+    background-image: url(../img/background/ground.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (max-width: 767.98px) {
+      width: 97%;
+    }
+
+    @media (max-width: 505px) {
+      width: 96%;
+    }
+
+    @media (max-width: 380px) {
+      width: 95%;
+    }
+  }
+}
+
+.header__background-opacity {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  position: absolute;
+  background-color: black;
+  opacity: 0.8;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+}
+
+.header__background-opacity.active {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  position: absolute;
+  background-color: black;
+  opacity: 0.8;
+  transform: translateX(0);
+}
+
+.header__wrapper-absolute {
+  z-index: 999;
+  position: absolute;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  width: 100%;
+}
+
+.header__menu-button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: block;
+  align-self: flex-end;
+}
+
+.header__burger {
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  background-color: rgb(255, 230, 0);
+  margin: 0 auto;
+  top: 21px;
+  box-shadow: 0px 0px 25px rgb(255, 230, 0);
+
+  &::after {
+    content: "";
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(255, 230, 0);
+    margin: 0 auto;
+    bottom: 8px;
+    box-shadow: 0px 0px 25px rgb(255, 230, 0);
+  }
+
+  &::before {
+    content: "";
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(255, 230, 0);
+    margin: 0 auto;
+    top: 8px;
+    box-shadow: 0px 0px 25px rgb(255, 230, 0);
+  }
+}
+
+.header__burger.active {
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  background-color: rgb(255, 230, 0);
+  margin: 0 auto;
+  top: 21px;
+  box-shadow: 0px 0px 25px rgb(255, 230, 0);
+  transform: rotate(312deg);
+  transition: 0.5s;
+
+  &.active::after {
+    content: "";
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(255, 230, 0);
+    margin: 0 auto;
+    bottom: 8px;
+    box-shadow: 0px 0px 25px rgb(255, 230, 0);
+    display: none;
+  }
+
+  &.active::before {
+    content: "";
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(255, 230, 0);
+    margin: 0 auto;
+    top: 8px;
+    box-shadow: 0px 0px 25px rgb(255, 230, 0);
+    top: 45%;
+    transform: rotate(93deg);
+    transition: 0.5s;
+  }
+}
+
+.header__menu-block {
+  text-align: center;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+}
+
+.header__menu-block.active {
+  text-align: center;
+  transform: translateX(0);
+}
+
+.header__menu {}
+
+.menu {}
+
+.menu__body {}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (max-width: 767.98px) {
+    gap: 50px;
+  }
+}
+
+.menu__item {}
+
+.menu__link {
+  font-size: 30px;
+  color: $fairyColor;
+  text-shadow: 0px 0px 25px #9e7d35;
+}
+
+.header__layers {}
+
+.layers {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+
+}
+
+.layers__header {
+  z-index: 1;
+  transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+  will-change: transform;
+}
+
+.layers__title {
+  font-size: $index;
+  margin-bottom: calc($index * 2.2);
+  color: $fairyColor;
+  text-shadow: 0px 0px 15px #9e7d35;
+}
+
+.layers__modified-text {
+  font-weight: 900;
+  font-size: calc($index * 2);
+}
+
+.layers__overall {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  will-change: transform;
+}
+
+.layers__overall_base {
+  background-image: url(../img/background/layer-base.png);
+  background-size: cover;
+  background-position: center;
+  transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+  z-index: 0;
+}
+
+.layers__overall_midlle {
+  background-image: url(../img/background/layer-middle.png);
+  background-size: cover;
+  background-position: center;
+  transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+  z-index: 2;
+}
+
+.layers__overall_front {
+  background-image: url(../img/background/layer-front.png);
+  background-size: cover;
+  background-position: center;
+  transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0);
+  z-index: 3;
+}

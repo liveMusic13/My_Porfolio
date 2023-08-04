@@ -1,0 +1,325 @@
+@import "_nullstyle";
+@import "_fonts";
+
+[class*="__container"] {
+  max-width: 1887px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+/*=======================variable======================*/
+$fairyColor: #e7e7e0;
+$index: calc(1vw + 1vh);
+/**/
+@import "_header";
+@import "_footer";
+
+body {
+  font-size: 18px;
+  font-family: Releway_f;
+  background-color: black;
+  color: $fairyColor;
+  line-height: calc($index * 2);
+}
+
+/*============================galery===============================*/
+
+.galery {
+  background-image: url(../img/background/dungeon.jpg);
+  background-size: cover;
+}
+
+.galery__container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.galery__block-project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.galery__title {
+  font-size: calc($index * 1.5);
+  transform: translate3d(0, calc(var(--scrollTop) / -17.5), 0);
+  will-change: transform;
+
+  @media (max-width: 1087px) {
+    margin-top: 50px;
+  }
+
+  @media (max-width: 767.98px) {
+    font-size: calc($index * 3.5);
+    margin-top: 110px;
+    line-height: calc($index * 3.5);
+    text-align: center;
+  }
+}
+
+.galery__wrapper {
+  display: flex;
+  gap: 20px;
+  transform: translate3d(0, calc(var(--scrollTop) / -17.5), 0);
+  will-change: transform;
+
+  @media (max-width: 1087px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media (max-width: 767.98px) {
+    gap: 50px;
+  }
+}
+
+/*slider*/
+.wrapper-slider {
+  position: relative;
+  margin: 20px 0;
+}
+
+.wrapper-slider__images {
+  position: relative;
+  width: calc($index * 24);
+  height: calc($index * 20);
+}
+
+.wrapper-slider__images-title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+  padding: 7px 0;
+}
+
+.wrapper-slider__images .image {
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 800ms ease;
+}
+
+.wrapper-slider__images .image.active {
+  opacity: 1;
+}
+
+.wrapper-slider__arrows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+.wrapper-slider__arrow {
+  position: absolute;
+  width: 15%;
+  height: 100%;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.4);
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.wrapper-slider__arrow_left {
+  left: 0;
+}
+
+.wrapper-slider__arrow_right {
+  right: 0;
+}
+
+.wrapper-slider__dots {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 100%;
+}
+
+.wrapper-slider__dots-item {
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.4s ease;
+
+  &:hover,
+  &.active {
+    background: #ccc;
+  }
+}
+
+/*===============================stack============================*/
+
+.stack {
+  background-image: url(../img/background/dungeon.jpg);
+  background-size: cover;
+}
+
+.stack__container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.stack__title {
+  font-size: calc($index * 1.5);
+  transform: translate3d(0, calc(var(--scrollTop) / -10.5), 0);
+  will-change: transform;
+
+  @media (max-width: 767.98px) {
+    font-size: calc($index * 3.5);
+  }
+}
+
+.stack__wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 100px);
+  gap: 20px;
+  transform: translate3d(0, calc(var(--scrollTop) / -10.5), 0);
+  will-change: transform;
+
+  @media (max-width: 767.98px) {
+    grid-template-columns: repeat(4, 100px);
+  }
+
+  @media (max-width: 479.98px) {
+    grid-template-columns: repeat(3, 80px);
+  }
+}
+
+.stack__block-skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.stack__skills-image {
+  &:hover {
+    width: 70px;
+    height: 70px;
+  }
+
+  &:hover~.stack__description-skills {
+    font-size: 25px;
+    text-shadow: 0px 0px 25px rgb(255, 230, 0);
+  }
+}
+
+.stack__description-skills {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.stack__description-skills_no-image {
+  &:hover {
+    font-size: 25px;
+    text-shadow: 0px 0px 25px rgb(255, 230, 0);
+  }
+}
+
+/*===============================contacts============================*/
+
+.contacts {
+  background-image: url(../img/background/dungeon.jpg);
+  background-size: cover;
+}
+
+.contacts__container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.contacts__title {
+  font-size: calc($index * 1.5);
+  transform: translate3d(0, calc(var(--scrollTop) / -10.5), 0);
+  will-change: transform;
+
+  @media (max-width: 767.98px) {
+    font-size: calc($index * 3.5);
+  }
+}
+
+.contacts__list {
+  display: flex;
+  gap: 30px;
+  transform: translate3d(0, calc(var(--scrollTop) / -10.5), 0);
+  will-change: transform;
+
+  @media (max-width: 767.98px) {
+    flex-direction: column;
+    gap: 70px;
+  }
+}
+
+.contacts__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contacts__image-social {}
+
+.contacts__image-social_git {
+  width: 28px;
+  height: 28px;
+}
+
+.contacts__link {
+  color: #3cf7c8;
+  text-shadow: 0px 0px 25px #242019;
+  font-size: calc($index * 0.7);
+
+  @media (max-width: 767.98px) {
+    font-size: calc($index * 2.7);
+  }
+}
+
+.contacts__image-phone {
+  width: 24px;
+}
+
+.contacts__phone {
+  color: #3cf7c8;
+  text-shadow: 0px 0px 25px #242019;
+  font-size: calc($index * 0.7);
+
+  @media (max-width: 767.98px) {
+    font-size: calc($index * 2.7);
+  }
+}

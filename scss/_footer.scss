@@ -1,0 +1,26 @@
+.footer {
+  font-size: $index;
+  line-height: calc($index * 2);
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.footer__title {}
+
+.footer_block-athor {
+  display: flex;
+  gap: 3px;
+}
+
+.footer__image-athor {
+  width: 12px;
+  height: 12px;
+  align-self: center;
+}
+
+.footer__author {}

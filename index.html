@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__background-opacity"></div>
+        <div class="header__wrapper-absolute">
+          <div class="header__menu-button">
+            <span class="header__burger"></span>
+          </div>
+          <div class="header__menu-block">
+            <div class="header__menu menu">
+              <nav class="menu__body">
+                <ul class="menu__list">
+                  <li class="menu__item"><a href="#myProject" class="menu__link 1">Мои работы</a></li>
+                  <li class="menu__item"><a href="#myStack" class="menu__link 2">Навыки</a></li>
+                  <li class="menu__item"><a href="#contacts" class="menu__link 3">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="header__layers layers">
+          <div class="layers__header">
+            <h2 class="layers__title">Привет, меня зовут Дмитрий
+              Коваленко.<br><span class="layers__modified-text">Я Frontentd-developer<span></h2>
+          </div>
+          <div class="layers__overall layers__overall_base"></div>
+          <div class="layers__overall layers__overall_midlle"></div>
+          <div class="layers__overall layers__overall_front"></div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section id="myProject" class="galery">
+        <div class="galery__container">
+          <div class="galery__block-project">
+            <h2 class="galery__title">Некоторые мои работы</h2>
+            <div class="galery__wrapper wrapper-slider">
+              <div class="wrapper-slider__images"></div>
+              <div class="wrapper-slider__arrows">
+                <div class="wrapper-slider__arrow wrapper-slider__arrow_left">&#9668;</div>
+                <div class="wrapper-slider__arrow wrapper-slider__arrow_right">&#9658;</div>
+              </div>
+              <div class="wrapper-slider__dots"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="myStack" class="stack">
+        <div class="stack__container">
+          <h2 class="stack__title">Навыки</h2>
+          <div class="stack__wrapper">
+            <div class="stack__block-skills">
+              <img src="img/iconStack/html5.svg" alt="html5" class="stack__skills-image">
+              <p class="stack__description-skills">HTML 5</p>
+            </div>
+            <div class="stack__block-skills">
+              <img src="img/iconStack/css3.svg" alt="css3" class="stack__skills-image">
+              <p class="stack__description-skills">CSS 3</p>
+            </div>
+            <div class="stack__block-skills">
+              <img src="img/iconStack/javascript.svg" alt="javascript" class="stack__skills-image">
+              <p class="stack__description-skills">JavaScript</p>
+            </div>
+            <div class="stack__block-skills">
+              <img src="img/iconStack/sass.svg" alt="scss" class="stack__skills-image">
+              <p class="stack__description-skills">SCSS</p>
+            </div>
+            <div class="stack__block-skills">
+              <img src="img/iconStack/figma.svg" alt="figma" class="stack__skills-image">
+              <p class="stack__description-skills">Figma</p>
+            </div>
+            <div class="stack__block-skills">
+              <img src="img/iconStack/photoshop.svg" alt="photoshop" class="stack__skills-image">
+              <p class="stack__description-skills">Photoshop</p>
+            </div>
+            <div class="stack__block-skills">
+              <img src="img/iconStack/git.svg" alt="git" class="stack__skills-image">
+              <p class="stack__description-skills">Git</p>
+            </div>
+            <p class="stack__description-skills stack__description-skills_no-image">ООП</p>
+            <p class="stack__description-skills stack__description-skills_no-image">БЭМ</p>
+            <p class="stack__description-skills stack__description-skills_no-image">Flexbox</p>
+            <p class="stack__description-skills stack__description-skills_no-image">Grid</p>
+            <p class="stack__description-skills stack__description-skills_no-image">AJAX</p>
+            <p class="stack__description-skills stack__description-skills_no-image">npm/yarn</p>
+            <p class="stack__description-skills stack__description-skills_no-image">React</p>
+          </div>
+        </div>
+      </section>
+      <section id="contacts" class="contacts">
+        <div class="contacts__container">
+          <h2 class="contacts__title">Связь со мной</h2>
+          <div class="contacts__list">
+            <div class="contacts__item">
+              <img src="img/icon_social/vk.png" alt="vk" class="contacts__image-social">
+              <a href="https://vk.com/id165406586" class="contacts__link">VKontakte</a>
+            </div>
+            <div class="contacts__item">
+              <img src="img/icon_social/telegram.png" alt="telegram" class="contacts__image-social">
+              <a href="https://t.me/DmitriyKovalenko13" class="contacts__link">Telegram</a>
+            </div>
+            <div class="contacts__item">
+              <img src="img/iconStack/phone.png" alt="phone" class="contacts__image-phone">
+              <a class="contacts__phone" href="tel:+375255376431">Phone</a>
+            </div>
+            <div class="contacts__item">
+              <img src="img/iconStack/git.svg" alt="github" class="contacts__image-social contacts__image-social_git">
+              <a href="https://github.com/liveMusic13" class="contacts__link">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <h2 class="footer__title">Коваленко Дмитрий Владимирович</h2>
+        <div class="footer_block-athor">
+          <img src="img/iconAuthor.png" alt="c" class="footer__image-athor">
+          <p class="footer__author">2023 Сайт-портфолио Frontend-разработчика</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+  <script src="js/slider.js"></script>
+</body>
+
+</html>
